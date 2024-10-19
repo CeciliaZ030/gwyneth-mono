@@ -4,3 +4,6 @@
 [submodule "reth"]
 	path = reth
 	url = https://github.com/taikoxyz/gwyneth
+[submodule "revm"]
+	path = revm
+	url = https://github.com/taikoxyz/revm
