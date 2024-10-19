@@ -1,0 +1,6 @@
+[submodule "rbuilder"]
+	path = rbuilder
+	url = https://github.com/taikoxyz/rbuilder
+[submodule "reth"]
+	path = reth
+	url = https://github.com/taikoxyz/gwyneth
