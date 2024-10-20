@@ -1,0 +1,16 @@
+
+# artifacts
+**/cargo/
+**/data/
+**/cache/
+**/out/
+**/target/
+**/scripts/
+**/integration_logs/
+**/packages/
+
+# misc
+**/.code
+**/.idea
+**/.git
+
