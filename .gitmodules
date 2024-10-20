@@ -7,3 +7,6 @@
 [submodule "revm"]
 	path = revm
 	url = https://github.com/taikoxyz/revm
+[submodule "revm-spector"]
+	path = revm-spector
+	url = https://github.com/taikoxyz/revm-inspectors.git
