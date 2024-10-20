@@ -10,3 +10,6 @@
 [submodule "revm-spector"]
 	path = revm-spector
 	url = https://github.com/taikoxyz/revm-inspectors.git
+[submodule "ethereum-package"]
+	path = ethereum-package
+	url = https://github.com/ethpandaops/ethereum-package.git
