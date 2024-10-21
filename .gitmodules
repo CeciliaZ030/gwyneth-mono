@@ -7,8 +7,8 @@
 [submodule "revm"]
 	path = revm
 	url = https://github.com/taikoxyz/revm
-[submodule "revm-spector"]
-	path = revm-spector
+[submodule "revm-inspectors"]
+	path = revm-inspectors
 	url = https://github.com/taikoxyz/revm-inspectors.git
 [submodule "ethereum-package"]
 	path = ethereum-package
