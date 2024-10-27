@@ -87,3 +87,13 @@ yarn-error.log
 
 # enclave dumps
 dump/
+
+
+# Rust 
+**/cargo
+**/data
+**/target
+
+# editors
+.code
+.idea
