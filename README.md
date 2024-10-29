@@ -1,6 +1,7 @@
 # gwyneth-mono
 
-To spin up a local network:
+## To Run
+Spin up a local network:
 ```
 $ make install
 ```
@@ -39,6 +40,13 @@ bdcf74e73990   rbuilder-el-1-gwyneth-lighthouse                 <none>          
 ```
 Then deploy Gwyneth protocol and proceed proposing blocks for both L2s. This will also deploy helper contracts and several examples to call the `XCallOptions` precompiles, enabling synchronous composibility.
 ```
-make deploy
+$ make deploy
 ```
+Btw sometimes L1 regorgs and we don't have implementation to hanle that on L2s, so just relaunch the whole thing.
 Have fun 🍻.
+## To Build
+If you change something and want to rebuild the images:
+```
+$ docker build . -t gwyneth-reth -f reth/Dockerfile
+$ docker build . -t gwyneth-rbuilder -f rbuilder/Dockerfile
+```

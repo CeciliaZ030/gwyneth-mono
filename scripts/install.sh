@@ -121,7 +121,7 @@ echo -e "${GREEN}All builds completed successfully!${NC}"
 
 # Show image sizes and creation times
 echo -e "\n${GREEN}Build Summary:${NC}"
-docker images --format "table {{.Repository}}\t{{.Size}}\t{{.CreatedAt}}" | grep "gwyneth-"
+docker images --format "table {{.Repository}}\t{{.Size}}\t{{.CreatedAt}}" | { grep "gwyneth-" || true; }  
 
 # Check if network_params_l2.yaml exists
 if [ ! -f "./ethereum-package/network_params_l2.yaml" ]; then
@@ -131,7 +131,7 @@ fi
 
 # Run Kurtosis
 echo -e "\n${YELLOW}Running Kurtosis...${NC}"
-if ! kurtosis run . --args-file ethereum-package/network_params_l2.yaml; then
+if ! kurtosis run ./ethereum-package --args-file ethereum-package/network_params_l2.yaml; then
     echo -e "${RED}Kurtosis command failed${NC}"
     exit 1
 fi
