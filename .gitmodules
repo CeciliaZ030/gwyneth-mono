@@ -13,3 +13,6 @@
 [submodule "ethereum-package"]
 	path = ethereum-package
 	url = https://github.com/ethpandaops/ethereum-package.git
+[submodule "protocol/lib/forge-std"]
+	path = protocol/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
