@@ -45,43 +45,43 @@ if ! docker info >/dev/null 2>&1; then
     exit 1
 fi
 
-# Initialize and update submodules
-echo -e "${YELLOW}Initializing and updating submodules...${NC}"
+# # Initialize and update submodules
+# echo -e "${YELLOW}Initializing and updating submodules...${NC}"
 
-# Initialize submodules if not already initialized
-if ! git submodule status &>/dev/null; then
-    echo -e "${YELLOW}Initializing submodules...${NC}"
-    if ! git submodule init; then
-        echo -e "${RED}Failed to initialize submodules${NC}"
-        exit 1
-    fi
-fi
+# # Initialize submodules if not already initialized
+# if ! git submodule status &>/dev/null; then
+#     echo -e "${YELLOW}Initializing submodules...${NC}"
+#     if ! git submodule init; then
+#         echo -e "${RED}Failed to initialize submodules${NC}"
+#         exit 1
+#     fi
+# fi
 
-# Update all submodules
-echo -e "${YELLOW}Updating submodules...${NC}"
-if ! git submodule update --init --recursive; then
-    echo -e "${RED}Failed to update submodules${NC}"
-    exit 1
-fi
+# # Update all submodules
+# echo -e "${YELLOW}Updating submodules...${NC}"
+# if ! git submodule update --init --recursive; then
+#     echo -e "${RED}Failed to update submodules${NC}"
+#     exit 1
+# fi
 
-# Verify all required submodules are present
-REQUIRED_SUBMODULES=(
-    "rbuilder"
-    "reth"
-    "revm"
-    "revm-inspectors"
-    "ethereum-package"
-    "protocol/lib/forge-std"
-)
+# # Verify all required submodules are present
+# REQUIRED_SUBMODULES=(
+#     "rbuilder"
+#     "reth"
+#     "revm"
+#     "revm-inspectors"
+#     "ethereum-package"
+#     "protocol/lib/forge-std"
+# )
 
-for submodule in "${REQUIRED_SUBMODULES[@]}"; do
-    if [ ! -d "$submodule" ]; then
-        echo -e "${RED}Error: Required submodule '$submodule' is missing${NC}"
-        exit 1
-    fi
-done
+# for submodule in "${REQUIRED_SUBMODULES[@]}"; do
+#     if [ ! -d "$submodule" ]; then
+#         echo -e "${RED}Error: Required submodule '$submodule' is missing${NC}"
+#         exit 1
+#     fi
+# done
 
-echo -e "${GREEN}All submodules initialized and updated successfully${NC}"
+# echo -e "${GREEN}All submodules initialized and updated successfully${NC}"
 
 # Function to build Docker image
 build_image() {
@@ -123,15 +123,15 @@ echo -e "${GREEN}All builds completed successfully!${NC}"
 echo -e "\n${GREEN}Build Summary:${NC}"
 docker images --format "table {{.Repository}}\t{{.Size}}\t{{.CreatedAt}}" | { grep "gwyneth-" || true; }  
 
-# Check if network_params_l2.yaml exists
-if [ ! -f "./ethereum-package/network_params_l2.yaml" ]; then
-    echo -e "${RED}Error: network_params_l2.yaml not found at ./ethereum-package/network_params_l2.yaml${NC}"
+# Check if network_params.yaml exists
+if [ ! -f "./ethereum-package/network_params.yaml" ]; then
+    echo -e "${RED}Error: network_params.yaml not found at ./ethereum-package/network_params.yaml${NC}"
     exit 1
 fi
 
 # Run Kurtosis
 echo -e "\n${YELLOW}Running Kurtosis...${NC}"
-if ! kurtosis run ./ethereum-package --args-file ethereum-package/network_params_l2.yaml; then
+if ! kurtosis run ./ethereum-package --args-file ethereum-package/network_params.yaml; then
     echo -e "${RED}Kurtosis command failed${NC}"
     exit 1
 fi
