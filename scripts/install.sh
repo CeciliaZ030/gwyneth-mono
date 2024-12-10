@@ -123,15 +123,15 @@ echo -e "${GREEN}All builds completed successfully!${NC}"
 echo -e "\n${GREEN}Build Summary:${NC}"
 docker images --format "table {{.Repository}}\t{{.Size}}\t{{.CreatedAt}}" | grep "gwyneth-"
 
-# Check if network_params_l2.yaml exists
-if [ ! -f "./ethereum-package/network_params_l2.yaml" ]; then
-    echo -e "${RED}Error: network_params_l2.yaml not found at ./ethereum-package/network_params_l2.yaml${NC}"
+# Check if network_params.yaml exists
+if [ ! -f "./ethereum-package/network_params.yaml" ]; then
+    echo -e "${RED}Error: network_params.yaml not found at ./ethereum-package/network_params_l2.yaml${NC}"
     exit 1
 fi
 
 # Run Kurtosis
 echo -e "\n${YELLOW}Running Kurtosis...${NC}"
-if ! kurtosis run . --args-file ethereum-package/network_params_l2.yaml; then
+if ! kurtosis run . --args-file ethereum-package/network_params.yaml; then
     echo -e "${RED}Kurtosis command failed${NC}"
     exit 1
 fi
