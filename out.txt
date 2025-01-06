@@ -1,0 +1,464 @@
+Starlark code successfully run. Output was:
+{
+        "all_participants": [
+                {
+                        "cl_context": {
+                                "beacon_grpc_url": "",
+                                "beacon_http_url": "http://172.16.32.14:4000",
+                                "beacon_service_name": "cl-1-teku-geth",
+                                "cl_nodes_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "cl-1-teku-geth",
+                                                "path": "/metrics",
+                                                "url": "172.16.32.14:8008"
+                                        }
+                                ],
+                                "client_name": "teku",
+                                "enr": "enr:-LK4QF_x0w-tRwsdYuoaBfhgM6Z5MDP3fwYZVsfuJ4Ih5KLTaSLtWZmOge973x-2qsrzCmuMveEU-2huw8dHFmYHFbIEh2F0dG5ldHOIAAAAAAAAAMCEZXRoMpABzFWtYAAAOADh9QUAAAAAgmlkgnY0gmlwhKwQIA6Jc2VjcDI1NmsxoQLUDWYG7FOZWBZGS9fvi0ynHjSxnT6DHqvasduBbKKx8IN0Y3CCIyiDdWRwgiMo",
+                                "http_port": 4000,
+                                "ip_addr": "172.16.32.14",
+                                "multiaddr": "/ip4/172.16.32.14/tcp/9000/p2p/16Uiu2HAm9hSG8VqeyXGReqC6rYZZLWAGfanqVhCwxqQnQeWXfqoM",
+                                "peer_id": "16Uiu2HAm9hSG8VqeyXGReqC6rYZZLWAGfanqVhCwxqQnQeWXfqoM",
+                                "snooper_enabled": false,
+                                "snooper_engine_context": null,
+                                "supernode": false,
+                                "validator_keystore_files_artifact_uuid": "1-teku-geth-0-63-0"
+                        },
+                        "cl_type": "teku",
+                        "el_context": {
+                                "client_name": "geth",
+                                "el_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "el-1-geth-teku",
+                                                "path": "/debug/metrics/prometheus",
+                                                "url": "172.16.32.10:9001"
+                                        }
+                                ],
+                                "engine_rpc_port_num": 8551,
+                                "enode": "enode://e134a2251b9e9355fa1967152406a7004018e8bb0ef7c426586582545c4ea97ba25261eff420337ffb05523ef8d57c3de7be47016d1e118063f497f5a7cc622e@172.16.32.10:30303",
+                                "enr": "enr:-Ki4QCZU-94RqFOtu67eeEdm9CUVt7h_ruR7b9NuZuuffwGuP2qtSesrezgbgIMrkxQTB7WmNgmBf3GeU4nzQtO3tUeGAZO51iV5g2V0aMzLhCtEy2iFAYV0xS-CaWSCdjSCaXCErBAgColzZWNwMjU2azGhAuE0oiUbnpNV-hlnFSQGpwBAGOi7DvfEJlhlglRcTql7hHNuYXDAg3RjcIJ2X4N1ZHCCdl8",
+                                "ip_addr": "172.16.32.10",
+                                "rpc_http_url": "http://172.16.32.10:8545",
+                                "rpc_port_num": 8545,
+                                "service_name": "el-1-geth-teku",
+                                "ws_port_num": 8546,
+                                "ws_url": "ws://172.16.32.10:8546"
+                        },
+                        "el_type": "geth",
+                        "ethereum_metrics_exporter_context": null,
+                        "remote_signer_context": null,
+                        "remote_signer_type": "web3signer",
+                        "snooper_beacon_context": null,
+                        "snooper_engine_context": null,
+                        "vc_context": null,
+                        "vc_type": "teku",
+                        "xatu_sentry_context": null
+                },
+                {
+                        "cl_context": {
+                                "beacon_grpc_url": "",
+                                "beacon_http_url": "http://172.16.32.15:4000",
+                                "beacon_service_name": "cl-2-teku-gwyneth",
+                                "cl_nodes_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "cl-2-teku-gwyneth",
+                                                "path": "/metrics",
+                                                "url": "172.16.32.15:8008"
+                                        }
+                                ],
+                                "client_name": "teku",
+                                "enr": "enr:-LK4QHZHSx4nq-esHjzczVdJIZCreeht1OcHKJ5qhAZCrm3ZRaj-ojxlWRxLkUL-J2vqZHXAOGXb_86HLVObh5QilI4Eh2F0dG5ldHOIAAAAGAAAAACEZXRoMpABzFWtYAAAOADh9QUAAAAAgmlkgnY0gmlwhKwQIA-Jc2VjcDI1NmsxoQPkZt7_DJQ_C39nra1jRzvVoPBZmXmEAEIKvDsEW2hVSoN0Y3CCIyiDdWRwgiMo",
+                                "http_port": 4000,
+                                "ip_addr": "172.16.32.15",
+                                "multiaddr": "/ip4/172.16.32.15/tcp/9000/p2p/16Uiu2HAmU2aHWQqLZWjS54atpZ8iRpPB6Ts9a9Rr2CYosKPnJ5Xw",
+                                "peer_id": "16Uiu2HAmU2aHWQqLZWjS54atpZ8iRpPB6Ts9a9Rr2CYosKPnJ5Xw",
+                                "snooper_enabled": false,
+                                "snooper_engine_context": null,
+                                "supernode": false,
+                                "validator_keystore_files_artifact_uuid": "2-teku-gwyneth-64-127-0"
+                        },
+                        "cl_type": "teku",
+                        "el_context": {
+                                "client_name": "gwyneth",
+                                "el_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "el-2-gwyneth-teku",
+                                                "path": "/metrics",
+                                                "url": "172.16.32.11:9001"
+                                        }
+                                ],
+                                "engine_rpc_port_num": 8551,
+                                "enode": "enode://27503fd44a57f22938343e67056dc70a8139b0dc1b3d37dc1a4f9e0d9af3930edb24e2327e128d3fdf73dfe46d2a25ca5fd21513b3aa748f246c57ac5dd70e57@172.16.32.11:30303",
+                                "enr": "",
+                                "ip_addr": "172.16.32.11",
+                                "rpc_http_url": "http://172.16.32.11:8545",
+                                "rpc_port_num": 8545,
+                                "service_name": "el-2-gwyneth-teku",
+                                "ws_port_num": 8546,
+                                "ws_url": "ws://172.16.32.11:8546"
+                        },
+                        "el_type": "gwyneth",
+                        "ethereum_metrics_exporter_context": null,
+                        "remote_signer_context": null,
+                        "remote_signer_type": "web3signer",
+                        "snooper_beacon_context": null,
+                        "snooper_engine_context": null,
+                        "vc_context": null,
+                        "vc_type": "teku",
+                        "xatu_sentry_context": null
+                },
+                {
+                        "cl_context": {
+                                "beacon_grpc_url": "",
+                                "beacon_http_url": "http://172.16.32.16:4000",
+                                "beacon_service_name": "cl-3-nimbus-gwyneth",
+                                "cl_nodes_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "cl-3-nimbus-gwyneth",
+                                                "path": "/metrics",
+                                                "url": "172.16.32.16:8008"
+                                        }
+                                ],
+                                "client_name": "nimbus",
+                                "enr": "enr:-Ly4QLwjss0evCIIwZEikzd1mdt3CBaA5U0bVvzF_mwkdTIBWBn8uPc6eFYSxZIJGrd725mNVK3bL18Bg079_TW3rFEDh2F0dG5ldHOIYAAAAAAAAACEZXRoMpABzFWtYAAAOADh9QUAAAAAgmlkgnY0gmlwhKwQIBCJc2VjcDI1NmsxoQJRb_0inI-0n0Zyrm-gSbTWYTX4BrKu-s2lgLbr7SRfcYhzeW5jbmV0cw2DdGNwgiMog3VkcIIjKA",
+                                "http_port": 4000,
+                                "ip_addr": "172.16.32.16",
+                                "multiaddr": "/ip4/172.16.32.16/tcp/9000/p2p/16Uiu2HAkzua3gL5ajs4nRnKqRRSH7ZrsTtsuvsD62i4Yt2ngFDAx",
+                                "peer_id": "16Uiu2HAkzua3gL5ajs4nRnKqRRSH7ZrsTtsuvsD62i4Yt2ngFDAx",
+                                "snooper_enabled": false,
+                                "snooper_engine_context": null,
+                                "supernode": false,
+                                "validator_keystore_files_artifact_uuid": "3-nimbus-gwyneth-128-191-0"
+                        },
+                        "cl_type": "nimbus",
+                        "el_context": {
+                                "client_name": "gwyneth",
+                                "el_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "el-3-gwyneth-nimbus",
+                                                "path": "/metrics",
+                                                "url": "172.16.32.12:9001"
+                                        }
+                                ],
+                                "engine_rpc_port_num": 8551,
+                                "enode": "enode://5a8e8511f1d3727bd6be202ff40e5a5275f3bb4892f70a0da2f4d91ad9b4944a8022b29924720c7bffffe17187257f6f5ac3ce9db9e2586e1b23c00912231897@172.16.32.12:30303",
+                                "enr": "",
+                                "ip_addr": "172.16.32.12",
+                                "rpc_http_url": "http://172.16.32.12:8545",
+                                "rpc_port_num": 8545,
+                                "service_name": "el-3-gwyneth-nimbus",
+                                "ws_port_num": 8546,
+                                "ws_url": "ws://172.16.32.12:8546"
+                        },
+                        "el_type": "gwyneth",
+                        "ethereum_metrics_exporter_context": null,
+                        "remote_signer_context": null,
+                        "remote_signer_type": "web3signer",
+                        "snooper_beacon_context": null,
+                        "snooper_engine_context": null,
+                        "vc_context": null,
+                        "vc_type": "nimbus",
+                        "xatu_sentry_context": null
+                },
+                {
+                        "cl_context": {
+                                "beacon_grpc_url": "",
+                                "beacon_http_url": "http://172.16.32.17:4000",
+                                "beacon_service_name": "cl-4-lighthouse-gwyneth-builder",
+                                "cl_nodes_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "cl-4-lighthouse-gwyneth-builder",
+                                                "path": "/metrics",
+                                                "url": "172.16.32.17:5054"
+                                        }
+                                ],
+                                "client_name": "lighthouse",
+                                "enr": "enr:-Mm4QGWOuuEH6jrEp7hsvd5we8-fb6RzXsHJFC9z2N35bpThPKlReKWICulxWCNolh0IrwfgmHDD6Z34lL3q17S1FSsDh2F0dG5ldHOIAAAAAAADAACDY3NjBIRldGgykAHMVa1gAAA4AOH1BQAAAACCaWSCdjSCaXCErBAgEYRxdWljgiMpiXNlY3AyNTZrMaECgQx7WaVQysvHLWudQlsVusv0bKc-syiKSt0BCrkxtcaIc3luY25ldHMAg3RjcIIjKIN1ZHCCIyg",
+                                "http_port": 4000,
+                                "ip_addr": "172.16.32.17",
+                                "multiaddr": "/ip4/172.16.32.17/tcp/9000/p2p/16Uiu2HAm47RcT4Y4UbQHNAZR9WYGTuhoBTsEMvcV8XWS6sK7mnuj",
+                                "peer_id": "16Uiu2HAm47RcT4Y4UbQHNAZR9WYGTuhoBTsEMvcV8XWS6sK7mnuj",
+                                "snooper_enabled": null,
+                                "snooper_engine_context": null,
+                                "supernode": false,
+                                "validator_keystore_files_artifact_uuid": ""
+                        },
+                        "cl_type": "lighthouse",
+                        "el_context": {
+                                "client_name": "gwyneth",
+                                "el_metrics_info": [
+                                        {
+                                                "config": {
+                                                        "labels": null,
+                                                        "scrape_interval": "15s"
+                                                },
+                                                "name": "el-4-gwyneth-builder-lighthouse",
+                                                "path": "/metrics",
+                                                "url": "172.16.32.13:9001"
+                                        }
+                                ],
+                                "engine_rpc_port_num": 8551,
+                                "enode": "enode://a528b12d895538b4dacc887a5a78d50d460493f20ca7c0e4019ca0056021ed1e15ad9c3c053dc092b3891722d4599d61d400a239f8c670e5c377045ed3b70b7d@172.16.32.13:30303",
+                                "enr": "",
+                                "ip_addr": "172.16.32.13",
+                                "rpc_http_url": "http://172.16.32.13:8545",
+                                "rpc_port_num": 8545,
+                                "service_name": "el-4-gwyneth-builder-lighthouse",
+                                "ws_port_num": 8546,
+                                "ws_url": "ws://172.16.32.13:8546"
+                        },
+                        "el_type": "gwyneth-builder",
+                        "ethereum_metrics_exporter_context": null,
+                        "remote_signer_context": null,
+                        "remote_signer_type": "web3signer",
+                        "snooper_beacon_context": null,
+                        "snooper_engine_context": null,
+                        "vc_context": null,
+                        "vc_type": "",
+                        "xatu_sentry_context": null
+                }
+        ],
+        "final_genesis_timestamp": "1733989679",
+        "genesis_validators_root": "0xa63a1b2ffefb0fea452e9ad530c9a4bbd58c97c6ad82da001f142be64c91d61b",
+        "network_id": "3151908",
+        "network_params": {
+                "additional_preloaded_contracts": {},
+                "churn_limit_quotient": 32,
+                "custody_requirement": 4,
+                "data_column_sidecar_subnet_count": 128,
+                "deneb_fork_epoch": 0,
+                "deposit_contract_address": "0x4242424242424242424242424242424242424242",
+                "devnet_repo": "ethpandaops",
+                "eip7594_fork_epoch": 100000002,
+                "eip7594_fork_version": "0x60000038",
+                "ejection_balance": 16000000000,
+                "electra_fork_epoch": 100000000,
+                "eth1_follow_distance": 16,
+                "fulu_fork_epoch": 100000001,
+                "genesis_delay": 20,
+                "genesis_gaslimit": 30000000,
+                "max_blobs_per_block": 6,
+                "max_per_epoch_activation_churn_limit": 4,
+                "min_validator_withdrawability_delay": 256,
+                "network": "kurtosis",
+                "network_id": "3151908",
+                "network_sync_base_url": "https://snapshots.ethpandaops.io/",
+                "num_validator_keys_per_node": 64,
+                "prefunded_accounts": {
+                        "0x14dc79964da2c08b23698b3d3cc7ca32193d9955": {
+                                "balance": "10ETH"
+                        },
+                        "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65": {
+                                "balance": "10ETH"
+                        },
+                        "0x1cbd3b2770909d4e10f157cabc84c7264073c9ec": {
+                                "balance": "10ETH"
+                        },
+                        "0x25941dC771bB64514Fc8abBce970307Fb9d477e9": {
+                                "balance": "10ETH"
+                        },
+                        "0x4107be99052d895e3ee461C685b042Aa975ab5c0": {
+                                "balance": "10ETH"
+                        }
+                },
+                "preregistered_validator_count": 0,
+                "preregistered_validator_keys_mnemonic": "giant issue aisle success illegal bike spike question tent bar rely arctic volcano long crawl hungry vocal artwork sniff fantasy very lucky have athlete",
+                "preset": "minimal",
+                "samples_per_slot": 8,
+                "seconds_per_slot": 6,
+                "shard_committee_period": 64
+        },
+        "pre_funded_accounts": [
+                {
+                        "address": "0x8943545177806ED17B9F23F0a21ee5948eCaa776",
+                        "private_key": "bcdf20249abf0ed6d944c0288fad489e33f66b3960d9e6229c1cd214ed3bbe31"
+                },
+                {
+                        "address": "0xE25583099BA105D9ec0A67f5Ae86D90e50036425",
+                        "private_key": "39725efee3fb28614de3bacaffe4cc4bd8c436257e2c8bb887c4b5c4be45e76d"
+                },
+                {
+                        "address": "0x614561D2d143621E126e87831AEF287678B442b8",
+                        "private_key": "53321db7c1e331d93a11a41d16f004d7ff63972ec8ec7c25db329728ceeb1710"
+                },
+                {
+                        "address": "0xf93Ee4Cf8c6c40b329b0c0626F28333c132CF241",
+                        "private_key": "ab63b23eb7941c1251757e24b3d2350d2bc05c3c388d06f8fe6feafefb1e8c70"
+                },
+                {
+                        "address": "0x802dCbE1B1A97554B4F50DB5119E37E8e7336417",
+                        "private_key": "5d2344259f42259f82d2c140aa66102ba89b57b4883ee441a8b312622bd42491"
+                },
+                {
+                        "address": "0xAe95d8DA9244C37CaC0a3e16BA966a8e852Bb6D6",
+                        "private_key": "27515f805127bebad2fb9b183508bdacb8c763da16f54e0678b16e8f28ef3fff"
+                },
+                {
+                        "address": "0x2c57d1CFC6d5f8E4182a56b4cf75421472eBAEa4",
+                        "private_key": "7ff1a4c1d57e5e784d327c4c7651e952350bc271f156afb3d00d20f5ef924856"
+                },
+                {
+                        "address": "0x741bFE4802cE1C4b5b00F9Df2F5f179A1C89171A",
+                        "private_key": "3a91003acaf4c21b3953d94fa4a6db694fa69e5242b2e37be05dd82761058899"
+                },
+                {
+                        "address": "0xc3913d4D8bAb4914328651C2EAE817C8b78E1f4c",
+                        "private_key": "bb1d0f125b4fb2bb173c318cdead45468474ca71474e2247776b2b4c0fa2d3f5"
+                },
+                {
+                        "address": "0x65D08a056c17Ae13370565B04cF77D2AfA1cB9FA",
+                        "private_key": "850643a0224065ecce3882673c21f56bcf6eef86274cc21cadff15930b59fc8c"
+                },
+                {
+                        "address": "0x3e95dFbBaF6B348396E6674C7871546dCC568e56",
+                        "private_key": "94eb3102993b41ec55c241060f47daa0f6372e2e3ad7e91612ae36c364042e44"
+                },
+                {
+                        "address": "0x5918b2e647464d4743601a865753e64C8059Dc4F",
+                        "private_key": "daf15504c22a352648a71ef2926334fe040ac1d5005019e09f6c979808024dc7"
+                },
+                {
+                        "address": "0x589A698b7b7dA0Bec545177D3963A2741105C7C9",
+                        "private_key": "eaba42282ad33c8ef2524f07277c03a776d98ae19f581990ce75becb7cfa1c23"
+                },
+                {
+                        "address": "0x4d1CB4eB7969f8806E2CaAc0cbbB71f88C8ec413",
+                        "private_key": "3fd98b5187bf6526734efaa644ffbb4e3670d66f5d0268ce0323ec09124bff61"
+                },
+                {
+                        "address": "0xF5504cE2BcC52614F121aff9b93b2001d92715CA",
+                        "private_key": "5288e2f440c7f0cb61a9be8afdeb4295f786383f96f5e35eb0c94ef103996b64"
+                },
+                {
+                        "address": "0xF61E98E7D47aB884C244E39E031978E33162ff4b",
+                        "private_key": "f296c7802555da2a5a662be70e078cbd38b44f96f8615ae529da41122ce8db05"
+                },
+                {
+                        "address": "0xf1424826861ffbbD25405F5145B5E50d0F1bFc90",
+                        "private_key": "bf3beef3bd999ba9f2451e06936f0423cd62b815c9233dd3bc90f7e02a1e8673"
+                },
+                {
+                        "address": "0xfDCe42116f541fc8f7b0776e2B30832bD5621C85",
+                        "private_key": "6ecadc396415970e91293726c3f5775225440ea0844ae5616135fd10d66b5954"
+                },
+                {
+                        "address": "0xD9211042f35968820A3407ac3d80C725f8F75c14",
+                        "private_key": "a492823c3e193d6c595f37a18e3c06650cf4c74558cc818b16130b293716106f"
+                },
+                {
+                        "address": "0xD8F3183DEF51A987222D845be228e0Bbb932C222",
+                        "private_key": "c5114526e042343c6d1899cad05e1c00ba588314de9b96929914ee0df18d46b2"
+                },
+                {
+                        "address": "0xafF0CA253b97e54440965855cec0A8a2E2399896",
+                        "private_key": "4b9f63ecf84210c5366c66d68fa1f5da1fa4f634fad6dfc86178e4d79ff9e59"
+                }
+        ]
+}
+
+⭐ us on GitHub - https://github.com/kurtosis-tech/kurtosis
+INFO[2024-12-12T15:48:00+08:00] =================================================== 
+INFO[2024-12-12T15:48:00+08:00] ||          Created enclave: bold-fjord          || 
+INFO[2024-12-12T15:48:00+08:00] =================================================== 
+Name:            bold-fjord
+UUID:            78bf90d311c0
+Status:          RUNNING
+Creation Time:   Thu, 12 Dec 2024 15:47:03 CST
+Flags:           
+
+========================================= Files Artifacts =========================================
+UUID           Name
+ffc78b7c7ae3   1-teku-geth-0-63-0
+d5bed9ad0100   2-teku-gwyneth-64-127-0
+564c8880179c   3-nimbus-gwyneth-128-191-0
+100a5509a9a7   el_cl_genesis_data
+5be87482d9f3   final-genesis-timestamp
+9c2b35651e2c   genesis-el-cl-env-file
+71d05d00830b   genesis_validators_root
+3b67c1240198   jwt_file
+440e0df7f5d2   keymanager_file
+25d9971422b5   mev-rbuilder-config
+b5b5bb8236e1   prysm-password
+1b4d900bca1c   validator-ranges
+
+========================================== User Services ==========================================
+UUID           Name                                             Ports                                         Status
+acfcef9931e2   cl-1-teku-geth                                   http: 4000/tcp -> http://127.0.0.1:51814      RUNNING
+                                                                metrics: 8008/tcp -> http://127.0.0.1:51815   
+                                                                tcp-discovery: 9000/tcp -> 127.0.0.1:51816    
+                                                                udp-discovery: 9000/udp -> 127.0.0.1:62330    
+2381ce56b67a   cl-2-teku-gwyneth                                http: 4000/tcp -> http://127.0.0.1:51853      RUNNING
+                                                                metrics: 8008/tcp -> http://127.0.0.1:51854   
+                                                                tcp-discovery: 9000/tcp -> 127.0.0.1:51855    
+                                                                udp-discovery: 9000/udp -> 127.0.0.1:58078    
+f8d3cf706603   cl-3-nimbus-gwyneth                              http: 4000/tcp -> http://127.0.0.1:51877      RUNNING
+                                                                metrics: 8008/tcp -> http://127.0.0.1:51878   
+                                                                tcp-discovery: 9000/tcp -> 127.0.0.1:51879    
+                                                                udp-discovery: 9000/udp -> 127.0.0.1:65498    
+8d6bc62a17f9   cl-4-lighthouse-gwyneth-builder                  http: 4000/tcp -> http://127.0.0.1:51883      RUNNING
+                                                                metrics: 5054/tcp -> http://127.0.0.1:51881   
+                                                                tcp-discovery: 9000/tcp -> 127.0.0.1:51882    
+                                                                udp-discovery: 9000/udp -> 127.0.0.1:56880    
+eb08498825b5   el-1-geth-teku                                   engine-rpc: 8551/tcp -> 127.0.0.1:51772       RUNNING
+                                                                metrics: 9001/tcp -> http://127.0.0.1:51773   
+                                                                rpc: 8545/tcp -> 127.0.0.1:51770              
+                                                                tcp-discovery: 30303/tcp -> 127.0.0.1:51769   
+                                                                udp-discovery: 30303/udp -> 127.0.0.1:64367   
+                                                                ws: 8546/tcp -> 127.0.0.1:51771               
+e9f59221877c   el-2-gwyneth-teku                                engine-rpc: 8551/tcp -> 127.0.0.1:51782       RUNNING
+                                                                engine-rpc-0: 8651/tcp -> 127.0.0.1:51783     
+                                                                metrics: 9001/tcp -> http://127.0.0.1:51784   
+                                                                rpc: 8545/tcp -> 127.0.0.1:51780              
+                                                                rpc-0: 8544/tcp -> 127.0.0.1:51779            
+                                                                tcp-discovery: 30303/tcp -> 127.0.0.1:51785   
+                                                                udp-discovery: 30303/udp -> 127.0.0.1:49302   
+                                                                ws: 8546/tcp -> 127.0.0.1:51781               
+320bd7b08ae8   el-3-gwyneth-nimbus                              engine-rpc: 8551/tcp -> 127.0.0.1:51789       RUNNING
+                                                                engine-rpc-0: 8651/tcp -> 127.0.0.1:51790     
+                                                                engine-rpc-1: 8751/tcp -> 127.0.0.1:51791     
+                                                                metrics: 9001/tcp -> http://127.0.0.1:51795   
+                                                                rpc: 8545/tcp -> 127.0.0.1:51787              
+                                                                rpc-0: 8544/tcp -> 127.0.0.1:51794            
+                                                                rpc-1: 8543/tcp -> 127.0.0.1:51793            
+                                                                tcp-discovery: 30303/tcp -> 127.0.0.1:51792   
+                                                                udp-discovery: 30303/udp -> 127.0.0.1:63996   
+                                                                ws: 8546/tcp -> 127.0.0.1:51788               
+bd940cadecb6   el-4-gwyneth-builder-lighthouse                  engine-rpc: 8551/tcp -> 127.0.0.1:51801       RUNNING
+                                                                engine-rpc-0: 8651/tcp -> 127.0.0.1:51802     
+                                                                engine-rpc-1: 8751/tcp -> 127.0.0.1:51800     
+                                                                metrics: 9001/tcp -> http://127.0.0.1:51803   
+                                                                rpc: 8545/tcp -> 127.0.0.1:51806              
+                                                                rpc-0: 8544/tcp -> 127.0.0.1:51799            
+                                                                rpc-1: 8543/tcp -> 127.0.0.1:51805            
+                                                                tcp-discovery: 30303/tcp -> 127.0.0.1:51804   
+                                                                udp-discovery: 30303/udp -> 127.0.0.1:61933   
+                                                                ws: 8546/tcp -> 127.0.0.1:51807               
+1b14b1451617   validator-key-generation-cl-validator-keystore   <none>                                        RUNNING

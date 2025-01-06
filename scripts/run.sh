@@ -7,39 +7,42 @@ RED='\033[0;31m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# echo -e "\n${YELLOW}Running Kurtosis...${NC}"  
-# if ! kurtosis run ./ethereum-package --args-file ethereum-package/network_params.yaml; then  
-#     echo -e "${RED}Kurtosis command failed${NC}"  
-#     exit 1  
-# fi  
-# echo -e "${GREEN}Kurtosis command completed successfully${NC}"  
+echo -e "\n${YELLOW}Running Kurtosis...${NC}"  
+if ! kurtosis run ./ethereum-package --args-file ethereum-package/network_params.yaml; then  
+    echo -e "${RED}Kurtosis command failed${NC}"  
+    exit 1  
+fi  
+echo -e "${GREEN}Kurtosis command completed successfully${NC}"  
 
-# Function to extract RPC URL  
-get_rpc_url() {  
-    # Get the first running enclave  
-    ENCLAVE_NAME=$(kurtosis enclave ls | grep RUNNING | awk '{print $2}' | head -n 1)  
+# Function to extract RPC URL with port parameter
+get_rpc_url() {
+    local PORT=$1
     
-    if [ -z "$ENCLAVE_NAME" ]; then  
-        echo -e "${RED}No running enclave found.${NC}"  
-        exit 1  
-    fi  
+    # Get the first running enclave
+    ENCLAVE_NAME=$(kurtosis enclave ls | grep RUNNING | awk '{print $2}' | head -n 1)
     
-    # Inspect the enclave and extract the full RPC URL for the first el-* service  
-    RPC_URL=$(kurtosis enclave inspect "$ENCLAVE_NAME" | awk '/^[a-f0-9]+   el-/{p=NR+20}(NR<=p){print}' | grep "rpc: 8545/tcp" | grep -o '127\.0\.0\.1:[0-9]\+' | head -n 1)  
+    if [ -z "$ENCLAVE_NAME" ]; then
+        echo -e "${RED}No running enclave found.${NC}"
+        exit 1
+    fi
     
-    if [ -z "$RPC_URL" ]; then  
-        echo -e "${RED}Failed to extract RPC URL from enclave ${ENCLAVE_NAME}${NC}"  
-        exit 1  
-    fi  
+    # Inspect the enclave and extract the full RPC URL for the given port
+    RPC_URL=$(kurtosis enclave inspect "$ENCLAVE_NAME" | awk '/^[a-f0-9]+   el-/{p=NR+20}(NR<=p){print}' | grep "rpc: $PORT/tcp" | grep -o '127\.0\.0\.1:[0-9]\+' | head -n 1)
     
-    echo "http://$RPC_URL"  
-}  
+    if [ -z "$RPC_URL" ]; then
+        echo -e "${RED}Failed to extract RPC URL from enclave ${ENCLAVE_NAME} for port ${PORT}${NC}"
+        exit 1
+    fi
+    
+    echo "http://$RPC_URL"
+}
 
-# Extract RPC URL  
-RPC_URL=$(get_rpc_url)  
-echo -e "${GREEN}Successfully extracted RPC URL: $RPC_URL${NC}"  
+# Extract L1 RPC URL
+L1_RPC_URL=$(get_rpc_url 8545)
+echo -e "${GREEN}Successfully extracted L1 RPC URL: $L1_RPC_URL${NC}"
 
 # Load the .env file and extract the PRIVATE_KEY  
+cd ./protocol
 if [ -f .env ]; then  
     export $(grep -v '^#' .env | xargs)  
     PRIVATE_KEY=${PRIVATE_KEY}  
@@ -53,8 +56,16 @@ if [ -z "$PRIVATE_KEY" ]; then
     exit 1  
 fi  
 
-# Run the forge foundry script using the extracted RPC URL and PRIVATE_KEY  
-FORGE_COMMAND="forge script --rpc-url $RPC_URL protocol/scripts/DeployOnL1.s.sol:DeployOnL1 -vvvv --broadcast --private-key $PRIVATE_KEY --legacy"  
-echo -e "${YELLOW}Running forge foundry script...${NC}"  
-FORGE_OUTPUT=$(eval $FORGE_COMMAND | tee /dev/tty)  
-echo -e "${GREEN}Script execution completed.${NC}"  
+# Deploy contract on L1
+FORGE_COMMAND="forge script --rpc-url $L1_RPC_URL scripts/DeployOnL1.s.sol:DeployOnL1 -vvvv --broadcast --private-key $PRIVATE_KEY --legacy"
+echo -e "${YELLOW}Running forge foundry script to deploy on L1...${NC}"
+FORGE_OUTPUT=$(eval $FORGE_COMMAND | tee /dev/tty)
+echo -e "${GREEN}L1 deployment completed.${NC}"
+
+# Extract L2 RPC URL
+L2_RPC_URL=$(get_rpc_url 8544)
+echo -e "${GREEN}Successfully extracted L2 RPC URL: $L2_RPC_URL${NC}"
+
+# Test transfering on L2
+FORGE_COMMAND="forge script --rpc-url $L2_RPC_URL scripts/TestTransferL2.s.sol:TestTransferL2 -vvvv --broadcast --private-key $PRIVATE_KEY --legacy"
+echo -e "${YELLOW}Test transfering on L2...${NC}"
