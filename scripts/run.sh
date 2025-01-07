@@ -56,15 +56,20 @@ if [ -z "$PRIVATE_KEY" ]; then
     exit 1  
 fi  
 
+sleep 3
 # Deploy contract on L1
 FORGE_COMMAND="forge script --rpc-url $L1_RPC_URL scripts/DeployOnL1.s.sol:DeployOnL1 -vvvv --broadcast --private-key $PRIVATE_KEY --legacy"
 echo -e "${YELLOW}Running forge foundry script to deploy on L1...${NC}"
 FORGE_OUTPUT=$(eval $FORGE_COMMAND | tee /dev/tty)
 echo -e "${GREEN}L1 deployment completed.${NC}"
 
-# Extract L2 RPC URL
+Extract L2 RPC URL
 L2_RPC_URL=$(get_rpc_url 8544)
 echo -e "${GREEN}Successfully extracted L2 RPC URL: $L2_RPC_URL${NC}"
+
+# failed, just douse this:
+#   cd ./protocol
+#   forge script  scripts/TestTransferL2.s.sol:TestTransferL2 -vvvv --broadcast --legacy --rpc-url http://localhost:57050/
 
 # Test transfering on L2
 FORGE_COMMAND="forge script --rpc-url $L2_RPC_URL scripts/TestTransferL2.s.sol:TestTransferL2 -vvvv --broadcast --private-key $PRIVATE_KEY --legacy"
