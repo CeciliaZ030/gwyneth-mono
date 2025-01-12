@@ -63,7 +63,7 @@ echo -e "${YELLOW}Running forge foundry script to deploy on L1...${NC}"
 FORGE_OUTPUT=$(eval $FORGE_COMMAND | tee /dev/tty)
 echo -e "${GREEN}L1 deployment completed.${NC}"
 
-Extract L2 RPC URL
+# Extract L2 RPC URL
 L2_RPC_URL=$(get_rpc_url 8544)
 echo -e "${GREEN}Successfully extracted L2 RPC URL: $L2_RPC_URL${NC}"
 
